@@ -46,7 +46,7 @@ const Links = () => {
                             <i className={link.icon + " fa-2x"} />
                         </div>
                         <div className="w-7/10 text-center transition-all duration-500">
-                            <a data-tip data-for="click-to-copy" className="text-2xl hover:underline" href={link.url} target="_blank" onContextMenu={() => copyTo(link.url)}>
+                            <a rel="noreferrer" data-tip data-for="click-to-copy" className="text-2xl hover:underline" href={link.url} target="_blank" onContextMenu={() => copyTo(link.url)}>
                                 {link.name}
                             </a>
                         </div>

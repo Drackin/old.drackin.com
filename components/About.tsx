@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 function Card() {
 
@@ -10,7 +11,7 @@ function Card() {
       <div className="flex
         <lg:flex-col <lg:w-[90%] <lg:justify-center <lg:items-center w-[70%]
         rounded-xl items-center justify-center space-x-5 space-y-3">
-        <img
+        <Image
           src="https://avatars.githubusercontent.com/u/78258229?v=4"
           alt="Drackin's Avatar"
           className="w-58 h-58 rounded-full"
