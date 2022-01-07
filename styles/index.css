@@ -9,4 +9,4 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-#indicator, .bg-pink-to-orange, #skill:hover { background: linear-gradient(to right, #db2777, #f97316); }
+#indicator, .bg-pink-to-orange { background: linear-gradient(to right, #db2777, #f97316); }
