@@ -16,12 +16,12 @@ function Card() {
           className="w-58 h-58 rounded-full"
         />
         <div className="h-[60%] flex flex-col space-y-4 <lg:w-full">
-          <h1 className="text-3xl <lg:text-center">Welcome to My Website, I'm <span className="text-blue-500">Drackin</span>!</h1>
-          <p>
+          <h1 className="text-3xl <lg:text-center">Welcome to My Website, I&asap;m <span className="text-blue-500">Drackin</span>!</h1>
+          <p>{`
             Hello, I'm Drackin. I'm 15 Years Old Full-Stack Developer. I am High School
             Student and I Live in Izmir/Turkey. My Purpose of Creating This Site
             Is To Introduce Myself And Make And Share APIs That Can Help You.
-          </p>
+          `}</p>
         </div>
       </div>
     </div>
