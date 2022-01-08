@@ -21,9 +21,9 @@ const Repositories = () => {
 
             <div className="lg:grid lg:grid-cols-3 gap-3 <lg:space-y-5 m-0 p-0 <lg:w-[20rem] w-[90%] min-h-1/3 self-center">
                 {repos.map((repo, i) => (
-                    <div key={i} className="justify-between rounded-xl items-center flex flex-col bg-dark-400 select-none">
-                        <a href={`https://github.com/Drackin/${repo.name}`} className="">
-                            <img src={`https://github-readme-stats.vercel.app/api/pin/?username=Drackin&repo=${repo.name}&theme=dark`} alt={repo.name} className="w-1000" />
+                    <div key={i} className="justify-between rounded-xl items-center flex flex-col select-none">
+                        <a href={`https://github.com/Drackin/${repo.name}`} className="h-full">
+                            <img src={`https://github-readme-stats.vercel.app/api/pin/?username=Drackin&repo=${repo.name}&theme=dark`} height="100" alt={repo.name} className="h-full" />
                         </a>
                     </div>
                 ))}
