@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
-import Loader, { LoaderProps } from "react-loader-spinner";
+import Loader from "react-loader-spinner";
 import Projects from "../components/Projects";
 import About from "../components/About";
 import Skills from "../components/Skills";
@@ -10,6 +10,7 @@ import Repositories from "../components/Repositories";
 import Stats from "../components/Stats";
 import Links from "../components/Links";
 import WeatherApi from "../components/WeatherApi";
+import TweetApi from "../components/TweetApi";
 
 const Home: NextPage = () => {
 
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       {isLoading === true ?
-        <div className="w-full h-screen flex flex-col items-center justify-center">
+        <div className="w-full h-screen flex flex-col items-center justify-center select-none">
           <Loader type="Rings" color="#007fff" width="200" height="200" />
           <p className="text-2xl font-semibold text-gray-300">Hold on, Almost Done.</p>
         </div>
@@ -46,6 +47,7 @@ const Home: NextPage = () => {
           <Stats />
           <Links />
           <WeatherApi />
+          <TweetApi />
         </div>
       }
     </div>
