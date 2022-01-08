@@ -9,7 +9,7 @@ const TweetApi = () => {
     }, [])
 
     const fetchTweet = async () => {
-        const data = await fetch("http://drackin.tk/api/twitter?avatar=https://avatars.githubusercontent.com/u/78258229?v=4&content=Test%20Tweet%20Image&fullname=Drackin&username=drackin_best")
+        const data = await fetch("https://drackin.tk/api/twitter?avatar=https://avatars.githubusercontent.com/u/78258229?v=4&content=Test%20Tweet%20Image&fullname=Drackin&username=drackin_best")
         const tweet = await data.blob();
         setTweetImg(tweet);
     }
