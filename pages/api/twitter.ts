@@ -13,9 +13,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
     );
 
-    myFont.load().then(async (font) => {
-        document.fonts.add(font);
-        console.log("Font loaded");
+    const font = await myFont.load()
+    document.fonts.add(font);
 
     const canvas = createCanvas(596, 334);
     const ctx = canvas.getContext("2d");
@@ -78,5 +77,4 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.setHeader("Content-Type", "image/png");
     res.status(200).send(canvas.toBuffer());
-    })
 }
