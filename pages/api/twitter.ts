@@ -8,7 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(400).json({ code: 400, message: "Please Enter All Query Params. (avatar, content, fullname, username)" })
     }
 
-    registerFont("./assets/Roboto-Regular.ttf", {
+    registerFont("assets/Roboto-Regular.ttf", {
       family: "Roboto"
     })
     const canvas = createCanvas(596, 334);
