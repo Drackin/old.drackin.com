@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { createCanvas, loadImage, registerFont } from "canvas"
+import { createCanvas, loadImage, registerFont } from "canvas";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
     const { avatar, content, fullname, username } = (req as any).query;
@@ -8,8 +8,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(400).json({ code: 400, message: "Please Enter All Query Params. (avatar, content, fullname, username)" })
     }
 
-    const font = await import("../../assets/Roboto.ttf");
-    registerFont(font, {
+    registerFont("../../../assets/Roboto.ttf", {
       family: "Roboto"
     })
     const canvas = createCanvas(596, 334);
