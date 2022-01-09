@@ -7,6 +7,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if(!avatar || !content || !fullname || !username) {
         return res.status(400).json({ code: 400, message: "Please Enter All Query Params. (avatar, content, fullname, username)" })
     }
+    
+    let myFont = new FontFace(
+        "Roboto",
+        "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+    );
+
+    myFont.load().then((font) => {
+        document.fonts.add(font);
+        console.log("Font loaded");
 
     const canvas = createCanvas(596, 334);
     const ctx = canvas.getContext("2d");
@@ -29,6 +38,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ctx.clip();
     const pp = await loadImage(avatar);
     ctx.drawImage(pp, 11, 11, 50, 50);
+     
 
     // Image Border Radius
     function roundedImage(x: number, y: number, width: number, height: number, radius: number) {
@@ -68,4 +78,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     res.setHeader("Content-Type", "image/png");
     res.status(200).send(canvas.toBuffer());
+    })
 }
