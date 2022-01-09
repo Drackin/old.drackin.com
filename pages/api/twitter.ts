@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
     );
 
-    myFont.load().then((font) => {
+    myFont.load().then(async (font) => {
         document.fonts.add(font);
         console.log("Font loaded");
 
