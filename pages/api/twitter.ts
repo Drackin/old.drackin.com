@@ -7,14 +7,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if(!avatar || !content || !fullname || !username) {
         return res.status(400).json({ code: 400, message: "Please Enter All Query Params. (avatar, content, fullname, username)" })
     }
-    
-    let myFont = new FontFace(
-        "Roboto",
-        "https://fonts.googleapis.com/css2?family=Roboto&display=swap"
-    );
-
-    const font = await myFont.load()
-    document.fonts.add(font);
 
     const canvas = createCanvas(596, 334);
     const ctx = canvas.getContext("2d");
@@ -26,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     ctx.fillStyle = "white"
     wrapText(ctx, content, 10, 100, 580, 30)
     // Full Name
-    ctx.font = "bold 25px Roboto";
+    ctx.font = "bold 25px Arial";
     ctx.fillText(fullname, 72, 35);
     // Username
     ctx.font = "15px Roboto";
