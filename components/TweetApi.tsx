@@ -24,7 +24,7 @@ const TweetApi = () => {
                         <span className="text-red-500">-X</span> GET https://drackin.tk/api/twitter
                     </p>
                     <p>
-                        <span className="text-red-500">-Q</span> avatar = https://simple.avatar.url/avatar.png
+                        <span className="text-red-500">-Q</span> avatar = https://avatar.url/avatar
                     </p>
                     <p>
                         <span className="text-red-500">-Q</span> content = Test Tweet Image
