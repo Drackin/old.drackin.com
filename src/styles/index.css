@@ -1,0 +1,24 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto+Mono&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#skill:hover > #grad-div, #skill:hover > p {
+  opacity: 1;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+#link:hover > #link-icon > div {
+  opacity: 1;
+}
+
+#link-url a, #skill p {
+  text-decoration: underline rgba(255, 255, 255, 0);
+  transition: text-decoration-color font-size 500ms;
+}
+
+#link:hover > #link-url > a, #skill:hover > p { text-decoration: underline; }
+#link-url a:hover, #skill:hover > p { text-decoration-color: rgba(255, 255, 255, 1); }

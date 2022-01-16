@@ -2,15 +2,14 @@ import React, { useEffect, useState } from "react";
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Loader from "react-loader-spinner";
-import Projects from "../components/Projects";
-import About from "../components/About";
-import Skills from "../components/Skills";
-import ScrollIndicator from "../components/ScrollIndicator";
-import Repositories from "../components/Repositories";
-import Stats from "../components/Stats";
-import Links from "../components/Links";
-import WeatherApi from "../components/WeatherApi";
-import TweetApi from "../components/TweetApi";
+import Projects from "@components/Projects";
+import About from "@components/About";
+import Skills from "@components/Skills";
+import ScrollIndicator from "@components/ScrollIndicator";
+import Repositories from "@components/Repositories";
+import Stats from "@components/Stats";
+import Links from "@components/Links";
+import WeatherApi from "@components/WeatherApi";
 
 const Home: NextPage = () => {
 
@@ -19,11 +18,11 @@ const Home: NextPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 3000)
+    }, 5000)
   }, [])
 
   return (
-    <div className="w-full min-h-screen bg-gray-900 text-white max-w-">
+    <div className="max-w-full min-h-screen bg-gray-900 text-white max-w-">
       <Head>
         <title>Drackin</title>
         <meta name="description" content="Hello, I'm Drackin. This is My Personal Website. I Love Coding." />
@@ -33,7 +32,7 @@ const Home: NextPage = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       {isLoading === true ?
-        <div className="w-full h-screen flex flex-col items-center justify-center select-none">
+        <div className="w-full h-screen flex flex-col items-center justify-center select-none bg-gray-900">
           <Loader type="Rings" color="#007fff" width="200" height="200" />
           <p className="text-2xl font-semibold text-gray-300">Hold on, Almost Done.</p>
         </div>
@@ -47,7 +46,6 @@ const Home: NextPage = () => {
           <Stats />
           <Links />
           <WeatherApi />
-          <TweetApi />
         </div>
       }
     </div>
