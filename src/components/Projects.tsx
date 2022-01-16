@@ -27,7 +27,7 @@ function Projects() {
     <div id="projects" className="mobile:min-h-screen lg:h-full mt-5 space-y-4 w-full flex flex-col text-white justify-center items-center">
       <h1 className="text-4xl text-center">Projects</h1>
 
-      <div className="lg:grid lg:grid-cols-2 gap-5 mobile:space-y-5 m-0 p-0 mobile:w-[20rem] w-[41%] min-h-full">
+      <div className="lg:grid lg:grid-cols-2 gap-5 mobile:space-y-5 m-0 p-0 mobile:w-[20rem] w-[41%] min-h-full self-center">
         {projects.map((project, i) => (
           <div key={i} className="w-[17rem] border border-gray-100 mobile:min-h-[26rem] lg:h-[25rem] justify-between rounded-xl items-center flex flex-col bg-[#151515] select-none">
 
