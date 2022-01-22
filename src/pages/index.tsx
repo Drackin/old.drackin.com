@@ -5,7 +5,6 @@ import Loader from "react-loader-spinner";
 import Projects from "@components/Projects";
 import About from "@components/About";
 import Skills from "@components/Skills";
-import ScrollIndicator from "@components/ScrollIndicator";
 import Repositories from "@components/Repositories";
 import Stats from "@components/Stats";
 import Links from "@components/Links";
@@ -38,7 +37,6 @@ const Home: NextPage = () => {
         </div>
       :
         <div className="h-full w-full bg-gray-900">
-          <ScrollIndicator />
           <About />
           <Skills />
           <Projects />
