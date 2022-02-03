@@ -30,7 +30,7 @@ const Links = () => {
         },
         {
             name: "Mail",
-            url: "mailto:sonaycannet10@gmail.com",
+            url: "mailto:hello@drackin.me",
             icon: "far fa-envelope"
         }
     ]
@@ -41,7 +41,7 @@ const Links = () => {
 
             <div className="lg:grid lg:grid-cols-3 gap-3 mobile:space-y-5 m-0 p-0 mobile:w-[19rem] w-[60%] min-h-full self-center">
                 {links.map((link, i) => (
-                    <div id="link" className="bg-[#151515] h-16 flex items-center rounded-xl" key={i}>
+                    <div id="link" className="bg-[#1b1b1b] h-16 flex items-center rounded-xl" key={i}>
                         <div id="link-icon" className="relative w-[30%] bg-gradient-to-r from-pink-600 to-orange-500 h-full flex items-center justify-center rounded-l-xl transition-all duration-500">
                             <div className="w-full h-full transition-all duration-500 rounded-l-xl bg-gradient-to-r from-blue-500 to-green-500 opacity-0"></div>
                             <i className={link.icon + " fa-2x absolute"} />

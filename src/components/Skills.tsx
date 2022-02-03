@@ -1,79 +1,187 @@
-import React from 'react';
+import React from "react";
+import {
+    SiJavascript,
+    SiPython,
+    SiCplusplus,
+    SiCsharp,
+    SiTypescript,
+    SiHtml5,
+    SiReact,
+    SiFirebase,
+    SiGit,
+    SiVisualstudiocode,
+    SiWebstorm,
+    SiNextdotjs,
+    SiNuxtdotjs,
+    SiArchlinux,
+    SiTailwindcss,
+    SiWindicss,
+    SiDeno,
+    SiFlutter,
+    SiRedux,
+} from "react-icons/si";
+import { FaSass, FaVuejs, FaJava, FaWindows, FaGithub, FaNodeJs } from "react-icons/fa";
 
 function Skills() {
-
     const skills = [
         {
             tech: "JavaScript",
-            url: "https://developer.mozilla.org/en/docs/Web/JavaScript"
+            url: "https://developer.mozilla.org/en/docs/Web/JavaScript",
+            icon: <SiJavascript />,
         },
         {
-            tech:"Python",
-            url: "https://python.org/"
+            tech: "Python",
+            url: "https://python.org/",
+            icon: <SiPython />,
         },
         {
             tech: "Java",
-            url: "https://java.com/"
+            url: "https://java.com/",
+            icon: <FaJava />,
         },
         {
             tech: "C++",
-            url: "https://cplusplus.com/"
+            url: "https://cplusplus.com/",
+            icon: <SiCplusplus />,
         },
         {
             tech: "C#",
-            url: "https://docs.microsoft.com/en-us/dotnet/csharp/"
+            url: "https://docs.microsoft.com/en-us/dotnet/csharp/",
+            icon: <SiCsharp />,
         },
         {
             tech: "TypeScript",
-            url: "https://typescriptlang.org/"
+            url: "https://typescriptlang.org/",
+            icon: <SiTypescript />,
         },
         {
             tech: "HTML",
-            url: "https://w3schools.com/html/"
+            url: "https://w3schools.com/html/",
+            icon: <SiHtml5 />,
         },
         {
             tech: "SASS",
-            url: "https://sass-lang.com/"
+            url: "https://sass-lang.com/",
+            icon: <FaSass />,
         },
         {
             tech: "React.js",
-            url: "https://reactjs.org/"
+            url: "https://reactjs.org/",
+            icon: <SiReact />,
         },
         {
             tech: "Vue.js",
-            url: "https://vuejs.org/"
+            url: "https://vuejs.org/",
+            icon: <FaVuejs />,
+        },
+        {
+            tech: "Flutter",
+            url: "https://flutter.dev/",
+            icon: <SiFlutter />,
+        },
+        {
+            tech: "Redux",
+            url: "https://redux.js.org/",
+            icon: <SiRedux />,
         },
         {
             tech: "Firebase",
-            url: "https://firebase.google.com"
+            url: "https://firebase.google.com",
+            icon: <SiFirebase />,
         },
         {
             tech: "Git",
-            url: "https://git-scm.com/"
+            url: "https://git-scm.com/",
+            icon: <SiGit />,
+        },
+        {
+            tech: "GitHub",
+            url: "https://github.com",
+            icon: <FaGithub />,
+        },
+        {
+            tech: "TailwindCSS",
+            url: "https://tailwindcss.com/",
+            icon: <SiTailwindcss />,
+        },
+        {
+            tech: "WindiCSS",
+            url: "https://windicss.com/",
+            icon: <SiWindicss />,
         },
         {
             tech: "VS Code",
-            url: "https://code.visualstudio.com/"
+            url: "https://code.visualstudio.com/",
+            icon: <SiVisualstudiocode />,
         },
         {
             tech: "WebStorm",
-            url: "https://www.jetbrains.com/webstorm/"
+            url: "https://www.jetbrains.com/webstorm/",
+            icon: <SiWebstorm />,
         },
-    ]
+        {
+            tech: "Next.js",
+            url: "https://nextjs.org/",
+            icon: <SiNextdotjs />,
+        },
+        {
+            tech: "Nuxt.js",
+            url: "https://nuxtjs.org/",
+            icon: <SiNuxtdotjs />,
+        },
+        {
+            tech: "Node.js",
+            url: "https://nodejs.org/",
+            icon: <FaNodeJs />,
+        },
+        {
+            tech: "Deno",
+            url: "https://deno.land/",
+            icon: <SiDeno />,
+        },
+        {
+            tech: "Arch Linux",
+            url: "https://archlinux.org/",
+            icon: <SiArchlinux />,
+        },
+        {
+            tech: "Windows 10",
+            url: "https://microsoft.com/en-us/windows/",
+            icon: <FaWindows />,
+        }
+    ];
 
     return (
         <div className="text-white flex flex-col justify-center space-y-4 min-h-[50vh] mt-5">
             <h1 className="text-4xl text-center">I Use</h1>
-            <div className="grid grid-cols-5 gap-3 mobile:grid-cols-2 items-center m-0 p-0 justify-center w-[80%] mobile:w-[90%] self-center" id="use">
-                { skills.map((skill, i) => (
-                    <a rel="noreferrer" target="_blank" href={skill.url} id="skill" className="relative w-full h-14 justify-center rounded-xl items-center flex bg-[#151515] border border-gray-100 select-none transition-all duration-300" key={i}>
-                        <div id="grad-div" className="w-full h-full transition-all duration-500 rounded-xl opacity-0 bg-gradient-to-r from-pink-600 via-red-500 to-orange-500"></div>
-                        <p className="absolute text-xl text-center duration-200">{skill.tech}</p>
+            <div
+                className="grid grid-cols-5 gap-3 mobile:grid-cols-2 items-center m-0 p-0 justify-center w-[80%] mobile:w-[90%] self-center"
+                id="use"
+            >
+                {skills.map((skill, i) => (
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href={skill.url}
+                        id="skill"
+                        className="relative w-full h-14 justify-center rounded-xl items-center flex bg-[#1b1b1b] select-none transition-all duration-300"
+                        key={i}
+                    >
+                        <div
+                            id="grad-div"
+                            className="w-full h-full transition-all duration-500 rounded-xl opacity-0 bg-gradient-to-r from-pink-600 via-red-500 to-orange-500"
+                        />
+                        <p id="skill-name" className="absolute text-xl text-center duration-200">
+                            {skill.tech}
+                        </p>
+                        <div id="skill-icon" className="absolute hidden text-4xl transition-all duration-200">
+                            {skill.icon}
+                        </div>
                     </a>
-                )) }
+                ))}
             </div>
         </div>
-    )
+    );
 }
 
-export default Skills
+export default Skills;

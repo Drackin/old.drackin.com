@@ -17,11 +17,11 @@ const Home: NextPage = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(false);
-    }, 5000)
+    }, 3000);
   }, [])
 
   return (
-    <div className="max-w-full min-h-screen bg-gray-900 text-white max-w-">
+    <div className="max-w-full min-h-screen bg-neutral-900 text-white max-w-">
       <Head>
         <title>Drackin</title>
         <meta name="description" content="Hello, I'm Drackin. This is My Personal Website. I Love Coding." />
@@ -36,7 +36,7 @@ const Home: NextPage = () => {
           <p className="text-2xl font-semibold text-gray-300">Hold on, Almost Done.</p>
         </div>
       :
-        <div className="h-full w-full bg-gray-900">
+        <div className="h-full w-full bg-[#111]">
           <About />
           <Skills />
           <Projects />
