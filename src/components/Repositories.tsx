@@ -17,7 +17,7 @@ const Repositories = () => {
 
     return (
         <div className="mobile:min-h-screen space-y-4 w-full flex flex-col text-white justify-center mt-10">
-            <h1 className="text-4xl text-center">Repositories</h1>
+            <h1 className="text-4xl text-center font-jetbrains">Repositories</h1>
 
             <div className="lg:flex justify-center items-center lg:flex-wrap gap-3 mobile:space-y-5 m-0 p-0 mobile:w-[20rem] w-[85%] min-h-1/3 self-center">
                 {repos.map((repo, i) => (

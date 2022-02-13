@@ -37,7 +37,7 @@ const Links = () => {
 
     return (
         <div className="space-y-4 w-full flex flex-col text-white justify-center mt-10">
-            <h1 className="text-4xl text-center">Links</h1>
+            <h1 className="text-4xl text-center font-jetbrains">Links</h1>
 
             <div className="lg:grid lg:grid-cols-3 gap-3 mobile:space-y-5 m-0 p-0 mobile:w-[19rem] w-[60%] min-h-full self-center">
                 {links.map((link, i) => (

@@ -34,7 +34,7 @@ function Projects() {
 
   return (
     <div id="projects" className="mobile:min-h-screen lg:h-full mt-5 space-y-4 w-full flex flex-col text-white">
-      <h1 className="text-4xl text-center">Projects</h1>
+      <h1 className="text-4xl text-center font-jetbrains">Projects</h1>
 
       <div className="flex mobile:flex-col gap-5 mobile:space-y-5 m-0 p-0 mobile:w-[20rem] w-[65%] min-h-full self-center">
         {projects.map((project, i) => (
@@ -42,12 +42,12 @@ function Projects() {
 
             <div className="h-[70%] flex flex-col items-center space-y-3 mt-5"> {/* Project Content */}
               <img src={project.image} alt={project.name} className="w-30 rounded-xl" />
-              <h1 className="text-2xl">{project.name}</h1>
+              <h1 className="text-2xl font-jetbrains">{project.name}</h1>
               <p className="text-center px-4">{project.description}</p>
             </div>
 
             <div className="lg:h-[10%] mobile:min-h-[3rem] border-t border-[#111] w-full text-center flex items-center justify-center"> {/* Project Link */}
-              <a href={project.link[1]}>{project.link[0]}</a>
+              <a className="underline transition duration-200" id="project-link" href={project.link[1]}>{project.link[0]}</a>
             </div>
 
           </div>

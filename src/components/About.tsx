@@ -20,7 +20,7 @@ function Card() {
             className="w-60 h-60 rounded-xl"
           />
           <div className="h-[60%] flex flex-col space-y-4 mobile:w-full">
-            <h1 className="text-3xl mobile:text-center">Welcome to My Website, I{"'"}m <span className="text-blue-500">Drackin</span>!</h1>
+            <h1 className="text-3xl mobile:text-center">Welcome to My Website, I{"'"}m <span className="text-blue-500 font-jetbrains">Drackin</span>!</h1>
             <p>{`
               Hello, I'm Drackin. I'm 15 Years Old Full-Stack Developer. I am High School
               Student and I Live in Izmir/Turkey. My Purpose of Creating This Site

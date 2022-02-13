@@ -153,7 +153,7 @@ function Skills() {
 
     return (
         <div className="text-white flex flex-col justify-center space-y-4 min-h-[50vh] mt-5">
-            <h1 className="text-4xl text-center">I Use</h1>
+            <h1 className="text-4xl text-center font-jetbrains">I Use</h1>
             <div
                 className="grid grid-cols-5 gap-3 mobile:grid-cols-2 items-center m-0 p-0 justify-center w-[80%] mobile:w-[90%] self-center"
                 id="use"
