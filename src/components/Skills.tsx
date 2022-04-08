@@ -19,6 +19,9 @@ import {
     SiDeno,
     SiFlutter,
     SiRedux,
+    SiCloudera,
+    SiPhp,
+    SiSvelte
 } from "react-icons/si";
 import { FaSass, FaVuejs, FaJava, FaWindows, FaGithub, FaNodeJs } from "react-icons/fa";
 
@@ -38,6 +41,11 @@ function Skills() {
             tech: "Java",
             url: "https://java.com/",
             icon: <FaJava />,
+        },
+        {
+            tech: "C",
+            url: "https://www.tutorialspoint.com/cprogramming/",
+            icon: <SiCloudera />,
         },
         {
             tech: "C++",
@@ -75,9 +83,19 @@ function Skills() {
             icon: <FaVuejs />,
         },
         {
+            tech: "Svelte",
+            url: "https://svelte.dev/",
+            icon: <SiSvelte />
+        }
+        {
             tech: "Flutter",
             url: "https://flutter.dev/",
             icon: <SiFlutter />,
+        },
+        {
+            tech: "PHP",
+            url: "https://php.net/",
+            icon: <SiPhp />,
         },
         {
             tech: "Redux",
