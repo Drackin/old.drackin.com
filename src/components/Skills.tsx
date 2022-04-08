@@ -85,8 +85,8 @@ function Skills() {
         {
             tech: "Svelte",
             url: "https://svelte.dev/",
-            icon: <SiSvelte />
-        }
+            icon: <SiSvelte />,
+        },
         {
             tech: "Flutter",
             url: "https://flutter.dev/",
@@ -189,9 +189,14 @@ function Skills() {
                             id="grad-div"
                             className="w-full h-full transition-all duration-500 rounded-xl opacity-0 bg-gradient-to-r from-pink-600 via-red-500 to-orange-500"
                         />
-                        <p id="skill-name" className="absolute text-xl text-center duration-200">
-                            {skill.tech}
-                        </p>
+                        <div id="skill-name" className="absolute flex h-full w-full items-center justify-center">
+                            <div className="h-full flex items-center justify-center text-2xl w-[30%] bg-gradient-to-r from-pink-600 via-red-500 to-orange-500 rounded-tl-xl rounded-bl-xl">
+                                {skill.icon}
+                            </div>
+                            <p className="text-xl text-center duration-200 w-[70%]">
+                                {skill.tech}
+                            </p>
+                        </div>
                         <div id="skill-icon" className="absolute hidden text-4xl transition-all duration-200">
                             {skill.icon}
                         </div>

@@ -4,21 +4,21 @@ function Projects() {
 
   const projects = [
     {
-      name: "Zacron-Bot",
-      description: "Very Useful Discord Bot. It Contains Music, Moderation, Entertainment, Logo, Backup, Configurable, General and More...",
-      image: "https://cdn.discordapp.com/avatars/816268609181450260/d75a11a841cd6f45e66ffc0bfccfe29b.png?size=4096",
+      name: "ESS",
+      description: "ESS (Explore Solar System) a Website for Explore Solar System on Web as 3D! It's Going to Be Awesome!",
+      image: "http://www.nasa.gov/sites/default/files/thumbnails/image/1806.jpeg",
       link: [
-        "Add Your Server",
-        "https://discord.com/oauth2/authorize?client_id=816268609181450260&scope=bot&permissions=805314622"
+        "Go to Website",
+        "https://solar.drackin.me/",
       ]
     },
     {
-      name: "Reponse App",
+      name: "Merge App",
       description: "An App Where You Can Create Your Server, Build a Community, Meet Your Friends, Message, Talk and More.",
-      image: "https://i.vgy.me/QI8XPM.png",
+      image: "https://i.imgur.com/pW6lii3.png",
       link: [
         "Go to Website",
-        "https://reponse.app/"
+        "https://mergeapp.dev/"
       ]
     },
     {
@@ -41,7 +41,7 @@ function Projects() {
           <div key={i} className="w-[17rem] border border-[#222] mobile:min-h-[26rem] lg:h-[25rem] justify-between rounded-xl flex flex-col bg-[#181818] select-none self-center">
 
             <div className="h-[70%] flex flex-col items-center space-y-3 mt-5"> {/* Project Content */}
-              <img src={project.image} alt={project.name} className="w-30 rounded-xl" />
+              <img src={project.image} alt={project.name} className="w-30 h-[7.5rem] object-cover object-center rounded-xl" />
               <h1 className="text-2xl font-jetbrains">{project.name}</h1>
               <p className="text-center px-4">{project.description}</p>
             </div>

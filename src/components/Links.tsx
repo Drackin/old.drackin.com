@@ -20,7 +20,7 @@ const Links = () => {
         },
         {
             name: "Instagram",
-            url: "https://instagram.com/s_gmss.35",
+            url: "https://instagram.com/gmss.35",
             icon: "fab fa-instagram"
         },
         {
