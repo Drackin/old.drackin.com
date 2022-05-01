@@ -32,8 +32,30 @@ function Projects() {
     }
   ]
 
+  const projRef = React.useRef<HTMLDivElement>(null);
+
+  const cb: IntersectionObserverCallback = (entries) => {
+    const [entry] = entries;
+    console.log(entry);
+  }
+
+  const opts = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 1.0
+  }
+
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(cb, opts);
+    if(projRef.current) return observer.observe(projRef.current);
+
+    return () => {
+      if(projRef.current) return observer.unobserve(projRef.current);
+    }
+  }, [projRef, opts]);
+
   return (
-    <div id="projects" className="mobile:min-h-screen lg:h-full mt-5 space-y-4 w-full flex flex-col text-white">
+    <div id="projects" ref={projRef} className="mobile:min-h-screen lg:h-full mt-5 space-y-4 w-full flex flex-col text-white">
       <h1 className="text-4xl text-center font-jetbrains">Projects</h1>
 
       <div className="flex mobile:flex-col gap-5 mobile:space-y-5 m-0 p-0 mobile:w-[20rem] w-[65%] min-h-full self-center">

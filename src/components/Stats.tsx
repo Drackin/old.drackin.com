@@ -2,7 +2,7 @@ import React from 'react'
 
 const Stats = () => {
     return (
-        <div className="space-y-4 w-full flex flex-col text-white justify-center mt-10 lg:items-center select-none">
+        <div className="space-y-4 w-full flex flex-col text-white justify-center mt-10 lg:items-center select-none" id="stats">
             <h1 className="text-4xl text-center font-jetbrains">Stats</h1>
 
             <div className="flex flex-col w-[80%] self-center space-y-4 items-center">

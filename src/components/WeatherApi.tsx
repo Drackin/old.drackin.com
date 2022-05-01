@@ -9,7 +9,7 @@ const WeatherApi = () => {
             <div className="flex flex-col items-center w-[90%] self-center pb-5">
                 <div className="bg-gray-800 p-5" style={{ fontFamily: "'Roboto Mono', monospace" }}>
                     <p>
-                        <span className="text-red-500">-X</span> GET https://drackin.tk/api/weather
+                        <span className="text-red-500">-X</span> GET https://drackin.me/api/weather
                     </p>
                     <p>
                         <span className="text-red-500">-Q</span> city = california

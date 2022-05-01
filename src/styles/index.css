@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto+Mono&family=Ubuntu:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -36,6 +37,10 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
+.font-inter {
+  font-family: 'Inter', sans-serif;
+}
+
 ::-webkit-scrollbar {
   width: 0.6rem;
 }
@@ -53,4 +58,10 @@
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #333;
+}
+
+.nav-link {
+  background: linear-gradient(to right, #C824EC, #DF308D);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
