@@ -64,12 +64,12 @@ const Navbar = () => {
 
     return (
         <nav className="w-full h-10 border-b border-gray-800 flex items-center justify-between font-fira text-[#607B96]">
-            <a
+            <Link
                 href="/"
                 className="border-r mobile:border-none pl-5 text-sm border-gray-800 h-full w-[17.5%] flex items-center transition duration-200 hover:text-white hover:border-b-2 hover:border-b-orange-500"
             >
                 drackin.me
-            </a>
+            </Link>
 
             <div className="flex items-center mobile:hidden text-sm w-[72.5%] h-full">
                 {navs.map((nav, i) => (
@@ -107,12 +107,12 @@ const Navbar = () => {
             {menuOpen && (
                 <div className="fixed top-0 h-full w-full backdrop-blur-xl">
                     <div className="h-10 flex w-full border-b border-gray-800 items-center justify-between">
-                        <a
+                        <Link
                             href="/"
                             className="pl-5 text-sm h-full w-[17.5%] flex items-center transition duration-200 hover:text-white  hover:border-b-2 hover:border-b-orange-500"
                         >
                             drackin.me
-                        </a>
+                        </Link>
                         <button
                             className="flex pr-5"
                             onClick={() => setMenuOpen((bool) => !bool)}
