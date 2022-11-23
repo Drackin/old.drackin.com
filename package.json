@@ -7,29 +7,23 @@
     "start": "next start",
     "lint": "next lint"
   },
-  "dependencies": {
-    "@types/cors": "^2.8.12",
-    "ascii-art": "^2.8.5",
-    "canvas": "^2.9.1",
-    "canvas-constructor": "^5.0.2",
-    "canvg": "^4.0.0",
-    "cors": "^2.8.5",
-    "next": "12.0.7",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "react-icons": "^4.3.1",
-    "react-loader-spinner": "^4.0.0",
-    "weather-js": "^2.0.0"
-  },
   "devDependencies": {
-    "@types/ascii-art": "^1.4.0",
+    "@types/cors": "^2.8.12",
     "@types/node": "16.11.12",
     "@types/react": "17.0.37",
-    "autoprefixer": "^10.4.2",
+    "autoprefixer": "^10.4.13",
+    "cors": "^2.8.5",
     "eslint": "8.4.1",
-    "eslint-config-next": "12.0.7",
-    "postcss": "^8.4.5",
-    "tailwindcss": "^3.0.15",
+    "eslint-config-next": "13.0.4",
+    "next": "13.0.4",
+    "postcss": "^8.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.6.0",
+    "tailwindcss": "^3.2.4",
     "typescript": "4.5.2"
+  },
+  "dependencies": {
+    "github-lang-colors": "^1.0.4"
   }
 }

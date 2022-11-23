@@ -16,4 +16,4 @@ const Error404: FC<{ statusCode: any }> = ({ statusCode }) => {
     )
 }
 
-export default Error404
+export default Error404;

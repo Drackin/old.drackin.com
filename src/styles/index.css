@@ -3,26 +3,26 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-#skill:hover > #grad-div {
-  opacity: 1;
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
-#link:hover > #link-icon > div {
-  opacity: 1;
+:root {
+  background: #001728;
+  color: #fff;
+  background-image: url("../assets/bgBlur.png");
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center;
+  font-family: 'Fira Code', monospace;
 }
-
-#link-url a, #project-link {
-  text-decoration: underline rgba(255, 255, 255, 0);
-  transition: text-decoration-color font-size 500ms;
-}
-
-#link:hover > #link-url > a { text-decoration: underline; }
-#link-url a:hover, #project-link:hover { text-decoration-color: rgba(255, 255, 255, 1); }
 
 #skill:hover > #skill-name {
   display: hidden;
@@ -37,31 +37,10 @@
   font-family: 'JetBrains Mono', monospace;
 }
 
-.font-inter {
-  font-family: 'Inter', sans-serif;
+.font-fira {
+  font-family: 'Fira Code', monospace;
 }
 
 ::-webkit-scrollbar {
-  width: 0.6rem;
-}
-
-/* Track */
-::-webkit-scrollbar-track {
-  background: #ccc;
-}
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #666;
-}
-
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #333;
-}
-
-.nav-link {
-  background: linear-gradient(to right, #C824EC, #DF308D);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  width: 0px;
 }
