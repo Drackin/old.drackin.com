@@ -5,6 +5,6 @@ module.exports = {
     domains: [
       "avatars.githubusercontent.com",
       "localhost"
-    ]
+    ],
   }
 }
