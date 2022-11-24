@@ -79,8 +79,8 @@ const Navbar = () => {
                         passHref
                         className={
                             router.pathname === nav.link
-                                ? "border-r border-gray-800 w-[10%] h-full flex items-center justify-center text-white border-b-2 border-b-orange-500 transition duration-200"
-                                : "border-r border-gray-800 w-[10%] h-full flex items-center hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200"
+                                ? "border-r border-gray-800 px-7 h-full flex items-center justify-center text-white border-b-2 border-b-orange-500 transition duration-200"
+                                : "border-r border-gray-800 px-7 h-full flex items-center hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200"
                         }
                     >
                         {nav.name}

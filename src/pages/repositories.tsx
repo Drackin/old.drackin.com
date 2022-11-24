@@ -38,7 +38,7 @@ const Repositories: NextPage = () => {
     };
 
     return (
-        <div className="h-full flex sm:items-center">
+        <div className="h-full flex sm:items-center sm:overflow-auto">
             <section className="w-full flex-wrap flex justify-center sm:items-center">
                 {repos && repos.map((repo: any, index) => (
                     <a

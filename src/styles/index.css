@@ -41,13 +41,17 @@
   font-family: 'Fira Code', monospace;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   width: 0px;
-}
+} */
 
 @media screen and (max-width: 650px) {
   :root {
     background-position: right;
+  }
+
+  #mn {
+    height: calc(100% - 5rem);
   }
 }
 

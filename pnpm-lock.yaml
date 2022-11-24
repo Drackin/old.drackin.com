@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@types/cors': ^2.8.12
   '@types/node': 16.11.12
+  '@types/nprogress': ^0.2.0
   '@types/react': 17.0.37
   autoprefixer: ^10.4.13
   cors: ^2.8.5
@@ -10,6 +11,7 @@ specifiers:
   eslint-config-next: 13.0.4
   github-lang-colors: ^1.0.4
   next: 13.0.4
+  nprogress: ^0.2.0
   postcss: ^8.4.19
   react: 18.2.0
   react-dom: 18.2.0
@@ -19,10 +21,12 @@ specifiers:
 
 dependencies:
   github-lang-colors: 1.0.4
+  nprogress: 0.2.0
 
 devDependencies:
   '@types/cors': 2.8.12
   '@types/node': 16.11.12
+  '@types/nprogress': 0.2.0
   '@types/react': 17.0.37
   autoprefixer: 10.4.13_postcss@8.4.19
   cors: 2.8.5
@@ -265,6 +269,10 @@ packages:
 
   /@types/node/16.11.12:
     resolution: {integrity: sha512-+2Iggwg7PxoO5Kyhvsq9VarmPbIelXP070HMImEpbtGCoyWNINQj4wzjbQCXzdHTRXnqufutJb5KAURZANNBAw==}
+    dev: true
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -1655,6 +1663,10 @@ packages:
     resolution: {integrity: sha512-bdok/XvKII3nUpklnV6P2hxtMNrCboOjAcyBuQnWEhO665FwrSNRxU+AqpsyvO6LgGYPspN+lu5CLtw4jPRKNA==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
 
   /object-assign/4.1.1:
     resolution: {integrity: sha512-rJgTQnkUnH1sFw8yT6VSU3zD3sWmu6sZhIseY8VX+GRu3P6F7Fu+JNDoXfklElbLJSnc3FUQHVe4cU5hj+BcUg==}

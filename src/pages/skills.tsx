@@ -130,14 +130,14 @@ const Skills: NextPage = () => {
     ];
 
     return (
-        <div className="h-full flex items-center">
-            <section className="w-full flex-wrap flex justify-center sm:items-center">
+        <div className="h-full mobile:h-full flex sm:items-center">
+            <section className="w-full mobile:h-full flex-wrap flex justify-center sm:items-center">
                 {skills.map((skill, index) => (
                     <a
                         href={skill.url}
                         target="_blank"
                         rel="noreferrer"
-                        className="flex items-center w-48 mobile:w-full shadow m-2 mx-3 rounded-md h-16 mobile:m-2 transition duration-200 hover:-translate-y-1"
+                        className="flex items-center w-48 mobile:w-full shadow m-2 rounded-md h-16 transition duration-200 hover:-translate-y-1"
                         key={index}
                     >
                         <aside className="bg-[#011221] text-xl w-1/3 h-full flex items-center justify-center rounded-tl-md rounded-bl-md">
