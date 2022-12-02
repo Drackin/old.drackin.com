@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import Layout from "@components/Layout";
 import NProgress from "nprogress";
 import "nprogress/nprogress.css";
-
+import { AnimatePresence } from "framer-motion";
 
 function MyApp({ Component, pageProps }: AppProps) {
     const router = useRouter();
@@ -24,9 +24,11 @@ function MyApp({ Component, pageProps }: AppProps) {
     }, [router]);
 
     return (
-        <Layout>
-            <Component {...pageProps} />
-        </Layout>
+        <AnimatePresence mode="wait">
+            <Layout>
+                <Component {...pageProps} />
+            </Layout>
+        </AnimatePresence>
     );
 }
 

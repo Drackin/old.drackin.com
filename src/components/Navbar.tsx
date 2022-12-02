@@ -29,10 +29,6 @@ const Navbar = () => {
             name: "stats",
             link: "/stats",
         },
-        {
-            name: "companies",
-            link: "/companies",
-        },
     ];
 
     const footers = [
@@ -41,11 +37,11 @@ const Navbar = () => {
             icon: FaTwitter,
         },
         {
-            url: "https://instagram.com/gmss.35",
+            url: "https://instagram.com/9gmss",
             icon: FaInstagram,
         },
         {
-            url: "https://www.linkedin.com/in/drackin-best-031a48226/",
+            url: "https://linkedin.com/in/drackin",
             icon: FaLinkedin,
         },
         {
@@ -64,14 +60,14 @@ const Navbar = () => {
 
     return (
         <nav className="w-full h-10 border-b border-gray-800 flex items-center justify-between font-fira text-[#607B96]">
-            <Link
-                href="/"
-                className="border-r mobile:border-none pl-5 text-sm border-gray-800 h-full w-[17.5%] flex items-center transition duration-200 hover:text-white hover:border-b-2 hover:border-b-orange-500"
-            >
-                drackin.me
-            </Link>
 
-            <div className="flex items-center mobile:hidden text-sm w-[72.5%] h-full">
+            <div className="flex items-center mobile:hidden text-sm h-full">
+                <Link
+                    href="/"
+                    className="border-r mobile:border-none pl-5 w-56 text-sm border-gray-800 h-full flex items-center transition duration-200 hover:text-white hover:border-b-2 hover:border-b-orange-500"
+                >
+                    drackin.me
+                </Link>
                 {navs.map((nav, i) => (
                     <Link
                         href={nav.link}
@@ -88,10 +84,10 @@ const Navbar = () => {
                 ))}
             </div>
 
-            <div className="flex items-center mobile:hidden text-sm w-[12.5%] h-full border-l justify-center border-gray-800 ">
+            <div className="flex w-44 items-center mobile:hidden text-sm h-full border-l justify-center border-gray-800 ">
                 <Link
                     href="/contact"
-                    className="h-full flex items-center w-full hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200"
+                    className="h-full w-full flex items-center hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200"
                 >
                     contact
                 </Link>
@@ -127,7 +123,11 @@ const Navbar = () => {
                                 href={nav.link}
                                 key={i}
                                 onClick={() => setMenuOpen(false)}
-                                className="border-b h-[7.5%] border-gray-800 pl-5 w-full flex items-center hover:border-b-2 hover:border-b-orange-500 hover:text-white transition duration-200"
+                                className={
+                                    router.pathname === nav.link
+                                    ? "border-b h-[7.5%] border-gray-800 pl-5 w-full flex items-center hover:border-b-2 hover:border-b-orange-500 hover:text-white transition duration-200"
+                                    : "border-b h-[7.5%] border-gray-800 pl-5 w-full flex items-center hover:border-b-2 hover:border-b-blue-500 hover:text-white transition duration-200"
+                                }
                             >
                                 {nav.name}
                             </Link>

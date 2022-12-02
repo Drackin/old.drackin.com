@@ -4,7 +4,9 @@ module.exports = {
     disableStaticImages: false,
     domains: [
       "avatars.githubusercontent.com",
-      "localhost"
+      "localhost",
+      "img.openani.me",
+      "cdn.discordapp.com"
     ],
   }
 }

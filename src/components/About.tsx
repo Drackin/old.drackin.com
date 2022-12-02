@@ -2,7 +2,7 @@ import React from "react";
 
 function Card() {
     return (
-        <div className="w-full h-full mobile:h-full flex text-white justify-center">
+        <div className="w-full h-full flex text-white justify-center">
             <div className="flex flex-col mobile:w-full w-[70%] rounded-xl items-center justify-center space-x-5 space-y-3 h-full">
                 <div className="flex w-full rounded-xl items-center mobile:justify-center mobile:flex-col-reverse mobile:text-center justify-evenly space-x-5 mobile:space-x-0 mobile:space-y-3">
                     <div className="h-[60%] flex flex-col justify-center space-y-4 mobile:pt-3">

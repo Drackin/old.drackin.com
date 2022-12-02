@@ -18,7 +18,7 @@ const Footer = () => {
             icon: FaInstagram,
         },
         {
-            url: "https://www.linkedin.com/in/drackin-best-031a48226/",
+            url: "https://linkedin.com/in/drackin",
             icon: FaLinkedin,
         },
         {
