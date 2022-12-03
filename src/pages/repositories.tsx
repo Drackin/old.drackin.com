@@ -7,6 +7,7 @@ import {
     SiCsharp as CSharp,
 } from "react-icons/si";
 import ghColor from "github-lang-colors";
+import { motion } from "framer-motion";
 
 const Repositories: NextPage = () => {
     const [repos, setRepos] = React.useState<any[]>([]);
@@ -41,12 +42,15 @@ const Repositories: NextPage = () => {
         <div className="h-full flex sm:items-center sm:overflow-auto">
             <section className="w-full flex-wrap flex justify-center sm:items-center">
                 {repos && repos.map((repo: any, index) => (
-                    <a
+                    <motion.a
                         href={repo.html_url}
                         target="_blank"
                         rel="noreferrer"
                         className="flex items-center w-96 mobile:w-full transition duration-200 shadow hover:-translate-y-1 m-2 rounded-md h-36 mobile:m-2"
                         key={index}
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        transition={{ delay: index * 0.1 }}
                     >
                         <aside  className="bg-[#011221] text-xl w-1/4 h-full flex flex-col items-center justify-center rounded-tl-md rounded-bl-md space-y-2">
                             {repo.language ? Icons[repo.language as keyof typeof Icons] : <Document size={24} />}
@@ -63,7 +67,7 @@ const Repositories: NextPage = () => {
                             <p className="text-sm">{repo.description}</p>
                         </header>
 
-                    </a>
+                    </motion.a>
                 ))}
             </section>
         </div>

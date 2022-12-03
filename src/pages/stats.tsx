@@ -3,7 +3,7 @@ import { useLanyard } from "react-use-lanyard";
 import { FaSpotify as Spoti } from "react-icons/fa";
 import * as dotenv from "dotenv";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 interface Props {
     allTime: string;
@@ -17,12 +17,35 @@ const Stats: NextPage<Props> = (props) => {
         socket: true,
     });
 
-    const [langs, setLangs] = useState<any[]>([]),
-        [result, setResult] = useState<{
-            [key: string]: number;
-        }>({});
 
+    const [result, setResult] = useState<any>({});
 
+    useEffect(() => {
+        fetch("https://api.github.com/users/Drackin/repos")
+        .then(response => response.json().then(data => {;
+            data.map(async (repo: any) => {
+                const langRes = await axios.get(repo.languages_url);
+                const language = langRes.data;
+                Object.keys(language).length !== 0 &&
+                Object.keys(language).map((key, i) => {
+                    if (result[key] === undefined) {
+                        setResult((res: any) => ({ ...res, [key]: language[key]}));
+                    } else {
+                        setResult((res: any) => ({ ...res, [key]: result[key] + language[key]}));
+                    }
+                });
+            })
+        }).catch(err => console.log(err)));
+    }, []);
+
+    const calculateLangs = () => {
+        const langs = Object.keys(result);
+        const values = Object.values(result);
+        const total = values.reduce((a, b) => a + b, 0);
+        const percentage = values.map((value) => (value / total) * 100);
+        const langsAndPercentage = langs.map((lang, i) => `${lang} (${percentage[i]}%)`);
+        return langsAndPercentage.join(", ");
+    };
 
     const activity = () => {
         if (status && status?.listening_to_spotify) {
@@ -41,7 +64,7 @@ const Stats: NextPage<Props> = (props) => {
                     </header>
                 </a>
             );
-        } else if(status && status?.activities && status?.activities.filter((activity) => activity.id !== 'custom') !== []) {
+        } else if(status && status?.activities.length && (status?.activities.filter((activity) => activity.id !== 'custom') !== [])) {
             const current = status?.activities.filter((activity) => activity.id !== 'custom')[0];
             return (
                 <div className="shadow transition duration-200 hover:-translate-y-1 flex items-center w-96 h-36 bg-white bg-opacity-10 rounded-xl">
@@ -77,9 +100,7 @@ const Stats: NextPage<Props> = (props) => {
                     <p>All Time Since Today</p>
                 </div>
             </section>
-            {JSON.stringify(langs)}
-            res
-            {JSON.stringify(props.usedLangs)}
+            {calculateLangs()}
         </div>
     );
 };
@@ -90,40 +111,16 @@ export const getStaticProps: GetStaticProps = async () => {
         headers: {
             Authorization: `Basic ${process.env.WAKATIME_API_KEY}`,
         }
-    })
-
-    let result: {
-        [key: string]: number;
-    } = {};
-
-    let langs: any[] = [];
-
-    const repoRes = await axios.get("https://api.github.com/users/Drackin/repos");
-    repoRes.data.map(async (repo: any) => {
-        const langRes = await axios.get(repo.languages_url);
-        const language = langRes.data;
-        Object.keys(language).length !== 0 && langs.push(language);
     });
 
-    langs.map((lang) => {
-        Object.keys(lang).map((key, i) => {
-            console.log(key);
-            if (result[key] === undefined) {
-                result[key] = langs[i][key];
-                console.log(result);
-            } else {
-                result[key] = result[key] + langs[i][key];
-                console.log(result);
-            }
-        });
-    });
+
+
 
     const allTime = res.data.data.text;
     return (
         {
             props: {
                 allTime,
-                usedLangs: result,
             }
         }
     )
