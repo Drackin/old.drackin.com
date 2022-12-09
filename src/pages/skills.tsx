@@ -130,7 +130,7 @@ const Skills: NextPage = () => {
     ];
 
     return (
-        <div className="h-full mobile:h-full flex sm:items-center">
+        <div className="h-full flex sm:items-center">
             <section className="w-full mobile:h-full flex-wrap flex justify-center sm:items-center">
                 {skills.map((skill, index) => (
                     <a

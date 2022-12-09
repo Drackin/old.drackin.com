@@ -47,7 +47,7 @@
 
 @media screen and (max-width: 650px) {
   :root {
-    background-position: right;
+    background-position: center;
   }
 
   #mn {
@@ -58,4 +58,5 @@
 .shadow:hover {
   box-shadow: 0px 5.3px 6.7px rgba(0, 0, 0, 0.128), 0px 12.6px 13.8px rgba(0, 0, 0, 0.183),
             0px 21px 42px rgba(0, 0, 0, 0.3);
+  transition-duration: 200ms;
 }
