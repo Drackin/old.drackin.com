@@ -4,11 +4,11 @@ import { useRouter } from "next/router";
 import {
     FaBars,
     FaTimes,
-    FaDiscord,
-    FaGithub,
-    FaInstagram,
-    FaLinkedin,
-    FaTwitter,
+    FaDiscord as Discord,
+    FaInstagram as Insta,
+    FaLinkedin as Linkedin,
+    FaTwitter as Twitter,
+    FaRegEnvelope as Mail,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -35,23 +35,23 @@ const Navbar = () => {
     const footers = [
         {
             url: "https://twitter.com/s_gmss35",
-            icon: FaTwitter,
+            icon: Twitter,
         },
         {
             url: "https://instagram.com/9gmss",
-            icon: FaInstagram,
+            icon: Insta,
         },
         {
             url: "https://linkedin.com/in/drackin",
-            icon: FaLinkedin,
+            icon: Linkedin,
         },
         {
             url: "https://discord.com/users/607507574018801664",
-            icon: FaDiscord,
+            icon: Discord,
         },
         {
-            url: "https://github.com/Drackin",
-            icon: FaGithub,
+            url: "mailto:contact@drackin.me",
+            icon: Mail,
         },
     ];
 
@@ -101,12 +101,12 @@ const Navbar = () => {
             </div>
 
             <div className="flex w-44 items-center mobile:hidden text-sm h-full border-l justify-center border-gray-800 ">
-                <Link
-                    href="/contact"
+                <a
+                    href="https://blogs.drackin.me"
                     className="h-full w-full flex items-center hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200"
                 >
-                    contact
-                </Link>
+                    blogs (soon)
+                </a>
             </div>
 
             <button
@@ -116,54 +116,52 @@ const Navbar = () => {
                 <FaBars />
             </button>
 
-            {/* {menuOpen && ( */}
-                <motion.nav variants={sidebar} initial={false} animate={menuOpen ? "open" : "closed"} className="fixed top-0 right-0 h-full w-full backdrop-blur-xl">
-                    <div className="h-10 flex w-full border-b border-gray-800 items-center justify-between">
+            <motion.nav variants={sidebar} initial={false} animate={menuOpen ? "open" : "closed"} className="fixed top-0 right-0 h-full w-full backdrop-blur-xl">
+                <div className="h-10 flex w-full border-b border-gray-800 items-center justify-between">
+                    <Link
+                        href="/"
+                        className="px-5 text-sm h-full flex items-center transition duration-200 hover:text-white"
+                    >
+                        drackin.me
+                    </Link>
+                    <button
+                        className="flex p-5 h-full items-center"
+                        onClick={() => setMenuOpen((bool) => !bool)}
+                    >
+                        <FaTimes />
+                    </button>
+                </div>
+
+                <div className="flex flex-col text-base w-full text-white" style={{ height: "calc(100% - 5rem)" }}>
+                    {navs.map((nav, i) => (
                         <Link
-                            href="/"
-                            className="px-5 text-sm h-full flex items-center transition duration-200 hover:text-white"
+                            href={nav.link}
+                            key={i}
+                            onClick={() => setMenuOpen(false)}
+                            className={
+                                router.pathname === nav.link
+                                /* if path equals to item's name */
+                                ? "border-b border-l-2 h-[7.5%] border-gray-800 pl-5 w-full flex items-center border-l-orange-500 hover:text-white transition duration-200"
+                                : "border-b hover:border-l-2 h-[7.5%] border-b-gray-800 pl-5 w-full flex items-center hover:border-l-blue-500 hover:text-white transition duration-200"
+                            }
                         >
-                            drackin.me
+                            {nav.name}
                         </Link>
-                        <button
-                            className="flex p-5 h-full items-center"
-                            onClick={() => setMenuOpen((bool) => !bool)}
+                    ))}
+                </div>
+
+                <div className="h-10 flex w-full border-t border-gray-800 items-center justify-between">
+                    {footers.map((footer, index) => (
+                        <a
+                            href={footer.url}
+                            key={index}
+                            className="w-[25%] flex justify-center border-l border-gray-800 h-full items-center"
                         >
-                            <FaTimes />
-                        </button>
-                    </div>
-
-                    <div className="flex flex-col text-base w-full text-white" style={{ height: "calc(100% - 5rem)" }}>
-                        {navs.map((nav, i) => (
-                            <Link
-                                href={nav.link}
-                                key={i}
-                                onClick={() => setMenuOpen(false)}
-                                className={
-                                    router.pathname === nav.link
-                                    /* if path equals to item's name */
-                                    ? "border-b border-l-2 h-[7.5%] border-gray-800 pl-5 w-full flex items-center border-l-orange-500 hover:text-white transition duration-200"
-                                    : "border-b hover:border-l-2 h-[7.5%] border-b-gray-800 pl-5 w-full flex items-center hover:border-l-blue-500 hover:text-white transition duration-200"
-                                }
-                            >
-                                {nav.name}
-                            </Link>
-                        ))}
-                    </div>
-
-                    <div className="h-10 flex w-full border-t border-gray-800 items-center justify-between">
-                        {footers.map((footer, index) => (
-                            <a
-                                href={footer.url}
-                                key={index}
-                                className="w-[25%] flex justify-center border-l border-gray-800 h-full items-center"
-                            >
-                                <footer.icon />
-                            </a>
-                        ))}
-                    </div>
-                </motion.nav>
-            {/* )} */}
+                            <footer.icon />
+                        </a>
+                    ))}
+                </div>
+            </motion.nav>
         </nav>
     );
 };

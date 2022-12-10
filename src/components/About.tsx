@@ -1,6 +1,6 @@
 import React from "react";
 
-function Card() {
+const About = () => {
     return (
         <div className="w-full h-full flex text-white justify-center">
             <div className="flex flex-col mobile:w-full w-[70%] rounded-xl items-center justify-center space-x-5 space-y-3 h-full">
@@ -29,4 +29,4 @@ function Card() {
     );
 }
 
-export default Card;
+export default About;
