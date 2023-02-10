@@ -47,7 +47,7 @@ const Tuabs: NextPage = () => {
                     <p>
                         <strong>Affiliate</strong> means an entity that
                         controls, is controlled by or is under common control
-                        with a party, where &quot;control&quot; means ownership
+                        with a party, where {`'`}control{`'`} means ownership
                         of 50% or more of the shares, equity interest or other
                         securities entitled to vote for election of directors or
                         other managing authority.
@@ -62,8 +62,8 @@ const Tuabs: NextPage = () => {
                 <li>
                     <p>
                         <strong>Company</strong> (referred to as either
-                        &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot;
-                        or &quot;Our&quot; in this Agreement) refers to TUABS:
+                        {`'`}the Company{`'`}, {`'`}We{`'`}, {`'`}Us{`'`}
+                        or {`'`}Our{`'`} in this Agreement) refers to TUABS:
                         Emergency Helper.
                     </p>
                 </li>
@@ -419,7 +419,7 @@ const Tuabs: NextPage = () => {
             <p>
                 We will let You know via email and/or a prominent notice on Our
                 Service, prior to the change becoming effective and update the
-                &quot;Last updated&quot; date at the top of this Privacy Policy.
+                {`'`}Last updated{`'`} date at the top of this Privacy Policy.
             </p>
             <p>
                 You are advised to review this Privacy Policy periodically for
