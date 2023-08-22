@@ -10,11 +10,15 @@ import {
     SiReact as ReactJS,
     SiGit as Git,
     SiVisualstudiocode as VSC,
+    SiAndroid as AndroidStudio,
     SiNextdotjs as NextJS,
     SiNuxtdotjs as NuxtJS,
     SiTailwindcss as Tailwind,
     SiCloudera as CLang,
     SiSvelte as Svelte,
+    SiKotlin as Kotlin,
+    SiAdobepremierepro as PremierePro,
+    SiAdobephotoshop as Photoshop,
 } from "react-icons/si";
 import {
     FaSass as SASS,
@@ -59,8 +63,13 @@ const Skills: NextPage = () => {
         },
         {
             tech: "Rust",
-            url: "https://rust-lang.org",
+            url: "https://rust-lang.org/",
             icon: Rust,
+        },
+        {
+            tech: "Kotlin",
+            url: "https://kotlinlang.org/",
+            icon: Kotlin
         },
         {
             tech: "TypeScript",
@@ -113,6 +122,11 @@ const Skills: NextPage = () => {
             icon: VSC,
         },
         {
+            tech: "And. Studio",
+            url: "https://developer.android.com/studio/",
+            icon: AndroidStudio,
+        },
+        {
             tech: "Next.js",
             url: "https://nextjs.org/",
             icon: NextJS,
@@ -126,6 +140,16 @@ const Skills: NextPage = () => {
             tech: "Node.js",
             url: "https://nodejs.org/",
             icon: NodeJS,
+        },
+        {
+            tech: "Photoshop",
+            url: "https://adobe.com/products/photoshop/",
+            icon: Photoshop,
+        },
+        {
+            tech: "Premiere Pro",
+            url: "https://adobe.com/tr/products/premiere/",
+            icon: PremierePro,
         },
     ];
 

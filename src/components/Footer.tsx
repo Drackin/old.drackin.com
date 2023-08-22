@@ -27,7 +27,7 @@ const Footer = () => {
             icon: Discord,
         },
         {
-            url: "mailto:contact@drackin.me",
+            url: "mailto:contact@drackin.com",
             icon: Mail,
         },
     ];

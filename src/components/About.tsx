@@ -13,8 +13,9 @@ const About = () => {
                         <p className="text-blue-400 text-2xl">{"> $ whoami"}</p>
 
                         <p className="w-96 text-sm mobile:w-60 mobile:text-left">{`
-                            I'm 16 Years Old Full-Stack Developer. I am High School
-                            Student and I Live in Izmir/Turkey. My hobbies are playing the violin and guitar, sports and programming.
+                            I'm 17 years old Full-Stack Developer. I am a high school
+                            student and I live in Izmir/Turkey. I play an electric guitar and a violin.
+                            Music is a part of my life. And the other part is programming.
                         `}</p>
                     </div>
 

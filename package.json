@@ -27,7 +27,6 @@
     "axios": "^1.2.0",
     "framer-motion": "^7.6.17",
     "github-lang-colors": "^1.0.4",
-    "nprogress": "^0.2.0",
     "react-use-lanyard": "^0.1.4"
   }
 }

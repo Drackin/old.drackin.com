@@ -70,6 +70,10 @@ const Stats: NextPage<Props> = (props) => {
         {
             name: "Go",
             level: 25,
+        },
+        {
+            name: "Kotlin",
+            level: 100,
         }
     ]
 
@@ -128,7 +132,7 @@ const Stats: NextPage<Props> = (props) => {
             <section className="w-full flex-wrap flex justify-center sm:items-center">
                 {activity()}
                 <div className="shadow transition m-2 space-y-2 hover:-translate-y-1 flex flex-col items-center justify-center w-96 h-36 bg-white bg-opacity-10 rounded-xl">
-                    <p>WakaTime</p>
+                    <p>I coded</p>
                     <p className="font-semibold text-2xl">{props.allTime}</p>
                     <p>All Time Since Today</p>
                 </div>

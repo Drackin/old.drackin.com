@@ -9,6 +9,7 @@ import {
     FaLinkedin as Linkedin,
     FaTwitter as Twitter,
     FaRegEnvelope as Mail,
+    FaSpotify as Spotify,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -19,8 +20,8 @@ const Navbar = () => {
             link: "/",
         },
         {
-            name: "skills",
-            link: "/skills",
+            name: "techs",
+            link: "/techs",
         },
         {
             name: "repos",
@@ -50,7 +51,7 @@ const Navbar = () => {
             icon: Discord,
         },
         {
-            url: "mailto:contact@drackin.me",
+            url: "mailto:contact@drackin.com",
             icon: Mail,
         },
     ];
@@ -82,7 +83,7 @@ const Navbar = () => {
                     href="/"
                     className="border-r mobile:border-none pl-5 w-56 text-sm border-gray-800 h-full flex items-center transition duration-200 hover:text-white hover:border-b-2 hover:border-b-orange-500"
                 >
-                    drackin.me
+                    drackin.com
                 </Link>
                 {navs.map((nav, i) => (
                     <Link
@@ -100,12 +101,15 @@ const Navbar = () => {
                 ))}
             </div>
 
-            <div className="flex w-44 items-center mobile:hidden text-sm h-full border-l justify-center border-gray-800 ">
+            <div className="flex w-44 items-center mobile:hidden text-sm h-full border-l justify-center border-gray-800">
                 <a
-                    href="https://blogs.drackin.me"
-                    className="h-full w-full flex items-center hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200"
+                    href="https://open.spotify.com/user/d6h1jzll6hp71mhjevaiumuxq"
+                    className="h-full w-full flex items-center hover:border-b-2 hover:border-b-blue-500 justify-center hover:text-white transition duration-200 space-x-2"
+                    target="_blank"
+                    rel="noreferrer"
                 >
-                    blogs (soon)
+                    <Spotify className="text-lg" />
+                    <span>spotify</span>
                 </a>
             </div>
 
@@ -122,7 +126,7 @@ const Navbar = () => {
                         href="/"
                         className="px-5 text-sm h-full flex items-center transition duration-200 hover:text-white"
                     >
-                        drackin.me
+                        drackin.com
                     </Link>
                     <button
                         className="flex p-5 h-full items-center"
@@ -148,6 +152,14 @@ const Navbar = () => {
                             {nav.name}
                         </Link>
                     ))}
+
+                    <Link
+                        href="https://open.spotify.com/user/d6h1jzll6hp71mhjevaiumuxq"
+                        onClick={() => setMenuOpen(false)}
+                        className="border-b hover:border-l-2 h-[7.5%] border-b-gray-800 pl-5 w-full flex items-center hover:border-l-blue-500 hover:text-white transition duration-200"
+                    >
+                        spotify
+                    </Link>
                 </div>
 
                 <div className="h-10 flex w-full border-t border-gray-800 items-center justify-between">
